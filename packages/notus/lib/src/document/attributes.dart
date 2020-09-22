@@ -78,6 +78,7 @@ class NotusAttribute<T> implements NotusAttributeBuilder<T> {
     NotusAttribute.heading.key: NotusAttribute.heading,
     NotusAttribute.block.key: NotusAttribute.block,
     NotusAttribute.embed.key: NotusAttribute.embed,
+    NotusAttribute.highlight.key: NotusAttribute.highlight,
   };
 
   // Inline attributes
@@ -91,6 +92,8 @@ class NotusAttribute<T> implements NotusAttributeBuilder<T> {
   /// Link style attribute.
   // ignore: const_eval_throws_exception
   static const link = LinkAttributeBuilder._();
+
+  static const highlight = HighlightAttributeBuilder._();
 
   // Line attributes
 
@@ -341,6 +344,20 @@ class LinkAttributeBuilder extends NotusAttributeBuilder<String> {
   const LinkAttributeBuilder._() : super._(_kLink, NotusAttributeScope.inline);
 
   /// Creates a link attribute with specified link [value].
+  NotusAttribute<String> fromString(String value) =>
+      NotusAttribute<String>._(key, scope, value);
+}
+
+/// Builder for highlight attribute values.
+///
+/// There is no need to use this class directly, consider using
+/// [NotusAttribute.highlight] instead.
+class HighlightAttributeBuilder extends NotusAttributeBuilder<String> {
+  static const _kHighlight = 'mark';
+  const HighlightAttributeBuilder._()
+      : super._(_kHighlight, NotusAttributeScope.inline);
+
+  /// Creates a Highlight attribute with specified Highlight [value].
   NotusAttribute<String> fromString(String value) =>
       NotusAttribute<String>._(key, scope, value);
 }
