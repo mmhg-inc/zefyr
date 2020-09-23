@@ -352,10 +352,10 @@ class LinkAttributeBuilder extends NotusAttributeBuilder<String> {
 ///
 /// There is no need to use this class directly, consider using
 /// [NotusAttribute.highlight] instead.
-class HighlightAttributeBuilder extends NotusAttributeBuilder<String> {
+class HighlightAttributeBuilder extends NotusAttribute<bool> {
   static const _kHighlight = 'highlight';
   const HighlightAttributeBuilder._()
-      : super._(_kHighlight, NotusAttributeScope.inline);
+      : super._(_kHighlight, NotusAttributeScope.inline, true);
 
   /// Creates a Highlight attribute with specified Highlight [value].
   // NotusAttribute<String> fromString(String value) =>
