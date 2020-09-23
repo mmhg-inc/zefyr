@@ -149,15 +149,15 @@ class _ZefyrLineState extends State<ZefyrLine> {
       result = result.merge(theme.attributeTheme.link);
     }
     if (style.contains(NotusAttribute.highlight)) {
-      final hexStringToColor = (String hex) {
-        hex = hex.replaceFirst('#', '');
-        hex = hex.length == 6 ? 'ff' + hex : hex;
-        var val = int.parse(hex, radix: 16);
-        return Color(val);
-      };
-      final bgColor =
-          hexStringToColor(style.value<String>(NotusAttribute.highlight));
-      result = result.copyWith(backgroundColor: bgColor);
+      // final hexStringToColor = (String hex) {
+      //   hex = hex.replaceFirst('#', '');
+      //   hex = hex.length == 6 ? 'ff' + hex : hex;
+      //   var val = int.parse(hex, radix: 16);
+      //   return Color(val);
+      // };
+      // final fgColor =
+      //     hexStringToColor(style.value<String>(NotusAttribute.highlight));
+      result = result.copyWith(color: const Color(0xFF0066b2));
     }
     return result;
   }

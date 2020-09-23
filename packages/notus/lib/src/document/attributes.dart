@@ -327,12 +327,12 @@ class NotusStyle {
 
 /// Applies bold style to a text segment.
 class _BoldAttribute extends NotusAttribute<bool> {
-  const _BoldAttribute() : super._('b', NotusAttributeScope.inline, true);
+  const _BoldAttribute() : super._('bold', NotusAttributeScope.inline, true);
 }
 
 /// Applies italic style to a text segment.
 class _ItalicAttribute extends NotusAttribute<bool> {
-  const _ItalicAttribute() : super._('i', NotusAttributeScope.inline, true);
+  const _ItalicAttribute() : super._('italic', NotusAttributeScope.inline, true);
 }
 
 /// Builder for link attribute values.
@@ -353,13 +353,13 @@ class LinkAttributeBuilder extends NotusAttributeBuilder<String> {
 /// There is no need to use this class directly, consider using
 /// [NotusAttribute.highlight] instead.
 class HighlightAttributeBuilder extends NotusAttributeBuilder<String> {
-  static const _kHighlight = 'mark';
+  static const _kHighlight = 'highlight';
   const HighlightAttributeBuilder._()
       : super._(_kHighlight, NotusAttributeScope.inline);
 
   /// Creates a Highlight attribute with specified Highlight [value].
-  NotusAttribute<String> fromString(String value) =>
-      NotusAttribute<String>._(key, scope, value);
+  // NotusAttribute<String> fromString(String value) =>
+  //     NotusAttribute<String>._(key, scope, value);
 }
 
 /// Builder for heading attribute styles.
@@ -367,7 +367,7 @@ class HighlightAttributeBuilder extends NotusAttributeBuilder<String> {
 /// There is no need to use this class directly, consider using
 /// [NotusAttribute.heading] instead.
 class HeadingAttributeBuilder extends NotusAttributeBuilder<int> {
-  static const _kHeading = 'heading';
+  static const _kHeading = 'header';
   const HeadingAttributeBuilder._()
       : super._(_kHeading, NotusAttributeScope.line);
 
