@@ -140,7 +140,9 @@ class _ZefyrLineState extends State<ZefyrLine> {
   TextStyle _getTextStyle(NotusStyle style, ZefyrThemeData theme) {
     var result = TextStyle();
     if (style.containsSame(NotusAttribute.bold)) {
-      result = result.merge(theme.attributeTheme.bold);
+      var fontSize = result.fontSize ?? 16;
+      result = result.merge(theme.attributeTheme.bold)
+        .copyWith(fontSize: fontSize * 1.1);
     }
     if (style.containsSame(NotusAttribute.italic)) {
       result = result.merge(theme.attributeTheme.italic);
