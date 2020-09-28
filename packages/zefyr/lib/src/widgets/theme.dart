@@ -353,30 +353,40 @@ class AttributeTheme {
       ),
       heading1: LineTheme(
         textStyle: defaultLineTheme.textStyle.copyWith(
-          fontSize: 34.0,
-          color: defaultLineTheme.textStyle.color.withOpacity(0.7),
-          height: 1.15,
-          fontWeight: FontWeight.w300,
-        ),
-        padding: EdgeInsets.only(top: 16.0),
-      ),
-      heading2: LineTheme(
-        textStyle: defaultLineTheme.textStyle.copyWith(
-          fontSize: 24.0,
-          color: defaultLineTheme.textStyle.color.withOpacity(0.7),
-          height: 1.15,
-          fontWeight: FontWeight.normal,
-        ),
-        padding: EdgeInsets.only(top: 8.0),
-      ),
-      heading3: LineTheme(
-        textStyle: defaultLineTheme.textStyle.copyWith(
-          fontSize: 20.0,
+          fontSize: 20,
           color: defaultLineTheme.textStyle.color.withOpacity(0.7),
           height: 1.15,
           fontWeight: FontWeight.w500,
         ),
-        padding: EdgeInsets.only(top: 8.0),
+        padding: EdgeInsets.only(
+          top: 16.0,
+          bottom: 4.0
+        ),
+      ),
+      heading2: LineTheme(
+        textStyle: defaultLineTheme.textStyle.copyWith(
+          fontSize: 18,
+          color: defaultLineTheme.textStyle.color.withOpacity(0.7),
+          height: 1.15,
+          fontWeight: FontWeight.w500,
+        ),
+        padding: EdgeInsets.only(
+          top: 8.0,
+          bottom: 4.0
+        ),
+      ),
+      heading3: LineTheme(
+        textStyle: defaultLineTheme.textStyle.copyWith(
+          fontSize: 17,
+          decoration: TextDecoration.underline,
+          color: defaultLineTheme.textStyle.color.withOpacity(0.7),
+          height: 1.15,
+          fontWeight: FontWeight.w500,
+        ),
+        padding: EdgeInsets.only(
+          top: 8.0,
+          bottom: 4.0
+        ),
       ),
       bulletList: BlockTheme(
         padding: EdgeInsets.symmetric(vertical: 8.0),
