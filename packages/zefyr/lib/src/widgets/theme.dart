@@ -353,7 +353,7 @@ class AttributeTheme {
       ),
       heading1: LineTheme(
         textStyle: defaultLineTheme.textStyle.copyWith(
-          fontSize: 20,
+          fontSize: 18,
           color: defaultLineTheme.textStyle.color.withOpacity(0.7),
           height: 1.15,
           fontWeight: FontWeight.w500,
@@ -365,7 +365,7 @@ class AttributeTheme {
       ),
       heading2: LineTheme(
         textStyle: defaultLineTheme.textStyle.copyWith(
-          fontSize: 18,
+          fontSize: 17,
           color: defaultLineTheme.textStyle.color.withOpacity(0.7),
           height: 1.15,
           fontWeight: FontWeight.w500,
@@ -377,7 +377,7 @@ class AttributeTheme {
       ),
       heading3: LineTheme(
         textStyle: defaultLineTheme.textStyle.copyWith(
-          fontSize: 17,
+          fontSize: 16,
           decoration: TextDecoration.underline,
           color: defaultLineTheme.textStyle.color.withOpacity(0.7),
           height: 1.15,
